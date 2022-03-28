@@ -1,10 +1,10 @@
 import logging
 import os
-import requests
+import time
 
+import requests
 from telegram import ReplyKeyboardMarkup
 from telegram.ext import CommandHandler, Updater
-
 from dotenv import load_dotenv 
 
 load_dotenv()
@@ -62,6 +62,7 @@ def main():
 
     updater.start_polling()
     updater.idle()
+    time.sleep(600)
 
 
 if __name__ == '__main__':
